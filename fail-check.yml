@@ -1,0 +1,10 @@
+name: Always Fail Check
+
+on: [pull_request]
+
+jobs:
+  fail_job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Fail this job
+        run: exit 1
